@@ -46,10 +46,16 @@ const ModelCanvas = () => {
       camera={{ position: [0.008, -0.028, 0.137], fov: 50 }}
       className="h-full"
     >
-      <ambientLight intensity={0.9} />
-      <directionalLight intensity={1} />
+      <ambientLight intensity={0.3} />
+      <directionalLight
+        position={[0, 0.2, -0.2]}
+        intensity={2.5}
+        color={'#ffffff'}
+        castShadow
+      />
+      <pointLight position={[0, 0.2, 0.2]} intensity={0.4} color="#ffffff" />
       <hemisphereLight
-        intensity={1}
+        intensity={0.5}
         color={'#ffffff'}
         groundColor={'#000000'}
       />
